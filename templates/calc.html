@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator dark">
+            <div class="theme-toggler activate">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="class-display">
+                <p class="last_operation">{{ last_operation }}</p>
+                <div id="display">
+                    
+                    <input class="result" value="{{ operation }}">
+                </div>
+            </div>
+            <div class="buttons">
+                
+                <table>
+                    <tr>
+                        <form action="{{ url_for('Calculator') }}" method="GET">
+                            <td><button class="btn-operator" id="clear" name="button" value="clear">AC</button></td>
+                            <td><button class="btn-operator" id="/" name="button" value="/">/</button></td>
+                            <td><button class="btn-operator" id="*" name="button" value="*">*</button></td>
+                            <td><button class="btn-operator" id="backspace" name="button" value="del">↩</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <form action="{{ url_for('Calculator') }}" method="GET">
+                            <td><button class="btn-number" id="7" name="button" value="7">7</button></td>
+                            <td><button class="btn-number" id="8" name="button" value="8">8</button></td>
+                            <td><button class="btn-number" id="9" name="button" value="9">9</button></td>
+                            <td><button class="btn-operator" id="-" name="button" value="-">-</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <form action="{{ url_for('Calculator') }}" method="GET">
+                            <td><button class="btn-number" id="4" name="button" value="4">4</button></td>
+                            <td><button class="btn-number" id="5" name="button" value="5">5</button></td>
+                            <td><button class="btn-number" id="6" name="button" value="6">6</button></td>
+                            <td><button class="btn-operator" id="+" name="button" value="+">+</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <form action="{{ url_for('Calculator') }}" method="GET">
+                            <td><button class="btn-number" id="1" name="button" value="1">1</button></td>
+                            <td><button class="btn-number" id="2" name="button" value="2">2</button></td>
+                            <td><button class="btn-number" id="3" name="button" value="3">3</button></td>
+                            <td><button class="btn-equal" id="=" name="button" value="=">=</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <form action="{{ url_for('Calculator') }}" method="GET">
+                            <td><button class="btn-operator" id="(" name="button" value="(">(</button></td>
+                            <td><button class="btn-operator" id=")" name="button" value=")">)</button></td>
+                            <td><button class="btn-number" id="0" name="button" value="0">0</button></td>
+                            <td><button class="btn-operator" id="." name="button" value=".">.</button></td>
+                        </form>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
